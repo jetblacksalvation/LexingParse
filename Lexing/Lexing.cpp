@@ -26,6 +26,7 @@ std::vector<std::string> CheckChar(std::string const input) {
             }
         }
         if (!early_break) {
+            if(character != ' ' and character !='\n' )
             buffer += character;
         }
     }
