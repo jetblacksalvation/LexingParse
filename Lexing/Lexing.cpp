@@ -26,8 +26,14 @@ std::vector<std::string> CheckChar(std::string const input) {
             }
         }
         if (!early_break) {
-            if(character != ' ' and character !='\n' )
-            buffer += character;
+            if (character != ' ' and character != '\n') {
+                buffer += character;
+
+            }
+            else {
+                ret.push_back(buffer);
+                buffer = "";
+            }
         }
     }
     if (buffer.length() != 0) {
@@ -35,7 +41,7 @@ std::vector<std::string> CheckChar(std::string const input) {
     }
     return ret;
 }
-
+char fds432af34;
 int main()
 {
     std::vector<std::string> Lexemes;
