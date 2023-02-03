@@ -5,7 +5,6 @@ lex::Pairs lex::TokenMatcher(std::vector<std::string> lexemes) {
 	auto Tokens = lex::Tokens;//including a header twice creates the same variable twice.
 	//to guard against that use the const/constexpr keyword.
 	for (auto lexeme : lexemes) {
-
 		if (Tokens[lexeme] != 0) {
 			ret.emplace_back(lexeme, Tokens[lexeme]);
 		}

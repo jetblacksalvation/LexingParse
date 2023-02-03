@@ -11,8 +11,7 @@ namespace lex {
 	typedef std::vector<std::pair<std::string, int>> Pairs;
 	typedef std::vector<std::vector<std::pair<std::string, int >>> Statements_Ty;
 	enum {
-	INT = 1,
-	CHAR,
+	TYPE =1,
 	CONDITIONAL,
 	LBRACKET,
 	RBRACKET,
@@ -25,8 +24,7 @@ namespace lex {
 	SEMICOLON
 	};
 	const std::unordered_map<int, std::string>  TokenIdString{
-	{INT, "int"},
-	{CHAR, "char"},
+	{TYPE, "type"},
 	{CONDITIONAL, "conditional"},
 	{LBRACKET, "lbracket"},
 	{RBRACKET, "rbracket"},
@@ -39,8 +37,8 @@ namespace lex {
 	{SEMICOLON, "semicolon"}
 	};
 	const std::unordered_map<std::string, int>  Tokens({
-	{"int", INT},
-	{"char", CHAR},
+	{"int", TYPE},
+	{"char", TYPE},
 	{"if", CONDITIONAL},
 	{",", SEPERATOR},
 	{"=", ASSIGNMENT},
