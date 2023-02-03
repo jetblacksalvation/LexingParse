@@ -2,7 +2,7 @@
 //
 
 #include "ParseLexing.hpp"
-
+#include <fstream>
 /*
 	std::vector<std::string> CheckChar(std::string const input);// put into TokenMatcher -
    //parses strings into Lexemes/Words with no applied information
@@ -17,14 +17,23 @@
 */
 int main()
 {
-    std::vector<std::string> Lexemes;
-    std::string input;
+	std::string input;
+	std::ifstream file;
+	file.open("code.txt");
+	std::vector<lex::Statements_Ty> buffer;
+	while (std::getline(file,input))
+	{
+		buffer.push_back(lex::TokenIntoStatements(lex::TokenMatcher(lex::CheckChar(input))));
+	}
     std::getline(std::cin, input);
 	//auto bruh = lex::CheckChar(input);
 	//for (auto it : bruh) {
 	//	std::cout << it<<"\n";
 	//}
-	lex::ReadStatement(lex::TokenIntoStatements( lex::TokenMatcher(lex::CheckChar(input))));
+	for (auto it : buffer) {
+
+		lex::ReadStatement(it);
+	}
 
 
 }

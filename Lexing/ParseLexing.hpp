@@ -19,6 +19,7 @@ namespace lex {
 	NUMBER,
 	SEPERATOR,
 	ASSIGNMENT,
+	OPERATOR,
 	CUR_R_BRKT,
 	CUR_L_BRKT,
 	SEMICOLON
@@ -28,6 +29,7 @@ namespace lex {
 	{CONDITIONAL, "conditional"},
 	{LBRACKET, "lbracket"},
 	{RBRACKET, "rbracket"},
+	{OPERATOR, "operator"},
 	{WORD, "word"},
 	{NUMBER, "number"},
 	{SEPERATOR, "seperator"},
@@ -44,7 +46,9 @@ namespace lex {
 	{"=", ASSIGNMENT},
 	{";", SEMICOLON},
 	{"{", CUR_L_BRKT},
-	{"}", CUR_R_BRKT}
+	{"}", CUR_R_BRKT},
+	{"+", OPERATOR},
+	{"-", OPERATOR}
 	});
 
 	//declarations
