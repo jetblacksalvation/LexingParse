@@ -139,7 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CheckChar.cpp" />
     <ClCompile Include="Lexing.cpp" />
+    <ClCompile Include="TokenIntoStatement.cpp" />
+    <ClCompile Include="TokenMatcher.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ParseLexing.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
